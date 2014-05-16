@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<h1> Dognate </h1>
+    <title><%= title %></title>
+  </head>
+  <body>
+   <% if(session_data.sessionID)
+       { %>
+         <%= "Thanks for submitting your form. The information you submitted is Email: " + session_data.email + ", Name: " + session_data.name %>
+    <% } %> 
+    <form action="/process" method="post">
+      <input type="text" name="email" placeholder="Email" />
+      <input type="text" name="my_name" placeholder="Name" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

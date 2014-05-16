@@ -1,0 +1,87 @@
+Demo Chatoom
+
+1) have NodeJs server render views/index.ejs that has the html content for the client whenever the client requests "/".
+
+	routing/index.js
+	app.get("/", function(req, res){
+	res.render('index', {});
+	});
+
+2) in the cleint codes, have a javascript code  that asks the user for their and store this user input user input in a variable called name.
+	<script> 
+		var name = prompt('what is your name?');
+	</script>
+
+3) have the cleint EMit "got_a_new_user" and pass "name" to the server.
+	<script>
+	 var name = prompt('what is your name?');
+	 io = io.connect();
+	 io.emit('got_a_new_user', {name: name});
+
+	 </script>
+
+4) Have the server List for an event called 'got_a_new_user' and when that evetn gets triggered, 4.1) have the server BROADCAST an Event called "new_user" to the clients wit the neame of the new user attached to this event, 
+		app.io.route('got_a_new_usr', function(req){
+
+		app.io.broadcast('new_user' {name_user_name: req.data.name});
+		})
+
+4.2) we store the mname/session_id of the new user in a variable/array/hash called users, 
+
+	var users = {};
+	users[]
+
+
+4.3) to the person who sent this request, we EMIT an event called 'existing_users' with all the users data.
+
+	app.io.route('got_a_new_user', function(req){
+
+		app.io.braodcast('new_user', {new_user_name: req.data.name});
+		req.io.emit('exisiting_users's, users);
+	});
+
+
+5) ahve the client LISTEN for an event called 'new_user' and when this event gets triggered, have the cleint render this iformation in JQuery somewhere in the HTML. 
+
+	<script>
+	 var name = prompt('what is your name?');
+	 io = io.connect();
+	 io.emit('got_a_new_user', {name: name});
+	 io.on('new_user', function(data){
+	 //render this info in the HTML
+	 })
+
+	 </script>
+
+
+6) Have the server listen for an event 'disconnect', and when this occur, BROADCAST to all the clients an vent 'disconnetc_user' with some data (name of the disconnected uer) (NOTE: we'll probably need to pass a sessionID of somehting else to identity a user)
+
+7) Have the cleint listen for an event 'disconnected_user' and when this gets triggered, have the client remove the proper jQuery box.
+
+Quote App
+
+1) When the client requests "/", have the server render "views/index.ejs".
+	app.get("/", function(req, res){
+	res.render...
+	})
+
+2) Index.ejs, display a button. When the user clicks on this button, have it emit an event "give_me_a_quote". 
+
+	io.emit('give_me_a_quote')
+
+3)Have the server LISTEN for an event called "give_me_a_quote", and when triggered, have the server pick one of the random quotes in the quotes array, and EMIT an event "new_quote" with data (one of the quotes).
+	
+	var quotes = ["asdf", "asdf", "aasdf"]
+	app.io.route("give_me_a_quote", function(req){
+	var new_quote = quotes [0];
+
+	req.io.emit('new_quote', {quote: })
+	});
+
+4) Have the client listen fpr an event called "new_quote" and when it gets that event, display the quote in the HTML.
+
+		io.on("new_quote", function(data) {
+		//have a code ere to display the new quote in the html
+		}
+
+		})

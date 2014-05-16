@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://localhost');
+    socket.on('server-event', function () {
+        var input = prompt('Your name: DAvid');
+        socket.emit('client-event', { name: input });
+    });
+</script>
+</head>
+<body>
+</body>
+</html>

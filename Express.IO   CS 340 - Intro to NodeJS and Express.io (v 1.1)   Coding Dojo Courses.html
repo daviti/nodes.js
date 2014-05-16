@@ -1,0 +1,1608 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>Express.IO | CS 340 - Intro to NodeJS and Express.io (v 1.1) | Coding Dojo Courses</title>
+	<link rel="shortcut icon" href="http://codingdojo.boomyeah.com/static/favicon/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/static/css/common.css?t=1393953327" media="all" />
+	<link rel="stylesheet" type="text/css" href="/static/css/common_chapter.css?t=1393953327" media="all" />
+	<link rel="stylesheet" type="text/css" href="/static/css/student_chapter.css?t=1393953327" media="all" />
+	<link rel="stylesheet" type="text/css" href="/static/css/flick/flick.css?t=1393953327" media="all" />
+	<link rel="stylesheet" type="text/css" href="/static/css/flick/tabs.css?t=1393953327" media="all" />
+	<link rel="stylesheet" href="/static/css/tablesorter/style.css?t=1393953327" />
+	<link rel="stylesheet" type="text/css" href="/static/css/tipsy.css?t=1393953327" media="all" />
+	<link rel="stylesheet" type="text/css" href="/static/css/quiz_result.css?t=1393953327" media="all" />
+	<link rel="stylesheet" type="text/css" href="http://codingdojo.boomyeah.com/static/css/style.css.php?header_footer_color=C0C0C0&url_background=2E2E2E&url_text_color=FFFFFF" media="all" />
+	<link rel="stylesheet" type="text/css" href="/static/css/monokai-soda.css" media="all" />
+	<script type="text/javascript" src="/static/js/plugins/rainbow-custom.min.js"></script>
+	<script type="text/javascript" src="/static/scripts/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/static/scripts/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.tipsy.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.tablesorter.js"></script>
+	<script type="text/javascript" src="/static/js/student_chapter_page.js"></script>
+	<script type="text/javascript" src="/static/js/comment.js"></script>
+	<script type="text/javascript" src="/static/js/complete_chapter.js"></script>
+	<script type="text/javascript" src="/static/js/quiz_result.js"></script>
+	<!--[if !IE]><!-->
+	<script>  
+		// check if IE 10
+		if(/*@cc_on!@*/false){
+			document.documentElement.className+=' ie10';
+		}
+	</script>
+	<!--<![endif]--> 
+	
+<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-30283157-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+</script></head>
+<body>
+	<noscript>
+		<meta HTTP-EQUIV="REFRESH" content="0; url=http://codingdojo.boomyeah.com/notice/disabled_javascript"> 
+	</noscript>
+	<div id="wrapper">
+		<div id="fb-root"></div>
+				<div id="header">
+			<div id="navigation">	
+	<div id="logo" class="left">
+		<a href="/students/">Coding Dojo Courses</a>
+	</div>
+	<div id="profile" class="right">
+		<ul class="main_navigation">
+			<li class="main_nav_link">
+				
+				<div id="header_user_image"><img src="https://graph.facebook.com/100004083467191/picture" alt="100004083467191" /></div>
+				<div id="header_user_name">
+					<a href="/users/profile">David</a>
+				</div>			
+				<ul class="sub_navigation company_name">
+					<li class="description">Switch to other workspace(s)</li>				
+						<li class="new_company">
+						<a href="http://boomyeah.com/plans" target="_blank"><div class="button default_button centered">Add a new workspace</div></a>
+					</li>
+				</ul>
+				
+				<div class="clear"></div>
+			</li>
+			<li class="main_nav_link">
+				<a class="account" href="#">Account</a>
+				<ul class="sub_navigation setting">
+															<li><a href="/users/settings">Account Setting</a></li>
+					<li><a href="/main/log_off">Log Out</a></li>
+				</ul>
+				<div class="clear"></div>
+			</li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>		</div>
+		<div id="content" class="platform_content">
+			<div id="left_content" class="content left chapter_left_content">
+				<div id="chapter_top_block">
+					<div id="breadcrumb">
+						<ul>
+							<li>
+								<a href="/students/">Dashboard</a>
+								&raquo;
+							</li>
+							<li>
+								<a href="/students">CS 340 - Intro to NodeJS and Express.io (v 1.1)</a>
+								&raquo;
+							</li>
+							<li>
+								Express.IO							</li>
+						</ul>
+					</div>
+					
+					<div id="chapter_details_block">
+						<h1 id="chapter_title_block"><span id="chapter_title">Express.IO</span></h1>
+						<div class="chapter_description_block">
+							<div id="chapter_description">There are several ways to build application using Express + Socket.IO. What we recommend is that you learn Express.IO and do all the assignments/projects using Express.IO. This would be slightly different than just using Express Framework but we think you'll learn more about Node, Express, and SocketIO by using this framework.<br />
+<br />
+Below are documentations from https://github.com/techpines/express.io/tree/master/examples#readme. We have listed them here mainly for your reference and also to include our video where we explain some of these features.</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				
+				<div id="module_groups_block">
+						
+					<div class="module_tabs tabs module_item ui-tabs ui-widget ui-widget-content ui-corner-all" id="group_1">
+						<ul class="holder ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" alt="1">
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_8737">
+								<a href="#tab_8737">Express</a>
+							</li>
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_8917">
+								<a href="#tab_8917">Post/Session</a>
+							</li>
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_8943">
+								<a href="#tab_8943">Socket</a>
+							</li>
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_8945">
+								<a href="#tab_8945">Emit</a>
+							</li>
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_8946">
+								<a href="#tab_8946">Broadcast</a>
+							</li>
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_8740">
+								<a href="#tab_8740">Rooms</a>
+							</li>
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_8747">
+								<a href="#tab_8747">Others</a>
+							</li>
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_8971">
+								<a href="#tab_8971">II</a>
+							</li>
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_9113">
+								<a href="#tab_9113">III</a>
+							</li>
+						</ul>									
+						<div class="clear"></div>
+									
+									<div id="tab_8737" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden first_tab_div">
+										<div class="module_content_block">
+											<iframe class="embed_video" width="718" height="404" src="http://player.vimeo.com/video/82110216?wmode=opaque" frameborder="0" allowfullscreen="true" wmode="transparent"></iframe>
+											<div class="video_rating_block">
+												<form action="/students/process_rate" class="rate_form">
+													<input type="hidden" name="module_id" value="8737" />
+													<input type="hidden" name="rate" value="4" />
+												</form>
+												<span>Rate video:</span>
+												<span class="rating_area">
+													<span title="Click to rate" data-rate-value="5" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="4" class="current_user_rate">&#9734;</span>
+													<span title="Click to rate" data-rate-value="3" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="2" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="1" >&#9734;</span>
+												</span>
+											</div>
+											<div class="clear"></div>
+											<div id="module_description_8737" class="module_description"><h2>Getting started</h2>
+<p>
+                                  To set up an empty Express application, go to the directory where you want to create your express app (perhaps it's a good idea to create a folder called node somewhere in your user directory and run all of your node projects from this folder.)  Then type this in the terminal/command-prompt.
+</p>
+<pre data-language="javascript">sudo npm install -g express
+express --ejs first_app
+</pre>
+<p>
+                                  This would install express globally and install your first express app called first_app.  We're going to be using ejs instead of jade as the html template engine.  Jade is a popular html template engine that lets you create html texts with fewer texts but for the purpose of our training, we want you to use jshtml for all of your assignments.
+</p>
+<p>
+                                  Once this is done, type
+</p>
+<pre data-language="javascript">cd first_app
+sudo npm install
+sudo npm install express.io
+</pre>
+<p>
+                                  This will install all dependencies and also install express.io.
+</p>
+<h3>Default app.js we want everyone to use</h3>
+<p>
+  <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">The default app.js that is generated from express is lengthier than what we want.  There are many ways to organize your codes in Node, but we want you to start off your node project with the following codes for app.js.</span>
+</p>
+<pre data-language="javascript">var express = require('express.io');
+var path = require('path');
+var app = express().http().io();
+// configuring our environments
+app.configure(function(){
+  app.use(express.cookieParser());  
+  app.use(express.bodyParser());    //for handling post data
+  app.use(express.static(path.join(__dirname, 'public'))); //for handling static contents
+  app.use(express.session({secret: 'monkey'})); //for using sessions
+  app.set('view engine', 'ejs');
+});
+//we're going to have /routes/index.js handle all of our routing
+var route = require('./routes/index.js')(app);
+app.listen(6789);
+</pre>
+<p>
+                   Once this is done, you should be able to go to <a href="http://localhost:6789"> http://localhost:6789 </a> to see the node server in action!
+</p>
+<p>
+           IMPORTANT - Another way we could have made the app object available in our routes/index.js is to declare that variable without using the word var.  Declaring a variable without using var makes that object accessible everywhere.  This is very subtle and we don't recommend you do this but other developers do this to make objects accessible throughout the modules and we want you to be at least familiar with this practice (but we recommend that you don't use this for your own codes as using global variables can cause problems down the line).
+</p>
+<h2>References</h2>
+<p>
+                                                     Official Documentation for Express.IO: <a href="https://github.com/techpines/express.io" target="_blank">https://github.com/techpines/express.io</a>
+</p>
+<p>
+     To better understand what's happening inside app.js, please spend 2-3 hours going through the documentation on ExpressJS: <a href="http://expressjs.com/api.html" target="_blank">http://expressjs.com/api.html</a>  (click through Application, Request, Response, and Middleware to learn more about what different properties/methods in these objects mean).
+</p></div>
+										</div>
+							
+										<div class="right buttons_block">
+											<input type="button" name="module_next" class="module_button button next_button orange_button" alt="8917" value="Next"/>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div id="tab_8917" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<iframe class="embed_video" width="718" height="404" src="http://player.vimeo.com/video/82112941?wmode=opaque" frameborder="0" allowfullscreen="true" wmode="transparent"></iframe>
+											<div class="video_rating_block">
+												<form action="/students/process_rate" class="rate_form">
+													<input type="hidden" name="module_id" value="8917" />
+													<input type="hidden" name="rate"  />
+												</form>
+												<span>Rate video:</span>
+												<span class="rating_area">
+													<span title="Click to rate" data-rate-value="5" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="4" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="3" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="2" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="1" >&#9734;</span>
+												</span>
+											</div>
+											<div class="clear"></div>
+											<div id="module_description_8917" class="module_description"><p>
+                     Once you configure your app.js the way we recommended in the previous tab, we recommend you add all of your routing rules to routes/index.js file.  You'll read in other tutorials/documentations where they add these routing rules inside app.js, but we think it's a better practice to have all of these routing rules in a single file and make app.js as simple as possible.  Imagine that we had index.ejs that looked like the following:
+</p>
+<h4>views/index.ejs - client</h4>
+<pre data-language="html">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;&lt;%= title %&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;form action="/process" method="post"&gt;
+      &lt;input type="text" name="email" placeholder="Email" /&gt;
+      &lt;input type="text" name="my_name" placeholder="Name" /&gt;
+      &lt;input type="submit" value="Submit" /&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>
+  <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">What would you need to do to make your node server access and process these information submitted by this form?  Imagine that this is what we want to do:</span>
+</p>
+<ol>
+ <li>When someone goes to "localhost:6789", we want the node server to render views/index.ejs</li>
+ <li>When this form from index.ejs is submitted, we want this form to be <strong><u>posted</u></strong> to "/process"</li>
+ <li>We want the node server to recognize when someone posted something to "/process", and store this information in a session</li>
+ <li>After the information is stored in session, we want to redirect the user to "localhost:6789" but have it display a message that says "Thanks for submitting your form.  The information you submitted is Email: _____, Name: ____" where the email and the name value were retrieved from the session.</li>
+</ol>
+<p>
+                     To achieve this, we would do the following in routes/index.js
+</p>
+<h4>routes/index.js - server</h4>
+<pre data-language="javascript">
+module.exports = function Route(app){
+  app.get('/', function(req, res){
+    res.render('index', {title:'Welcome Page'});
+  });
+  app.post('/process', function(req, res){
+    console.log('POST INFO', req.body); //notice that the post information is stored in req.body
+    req.session.name = req.body.my_name;
+    req.session.email = req.body.email;
+    req.session.sessionID = req.sessionID; //unique sessionID for the user
+    req.session.save(function() {
+      res.redirect('/');
+    });
+  })
+}
+</pre>
+<p>
+                     Now, above codes do the trick for steps 1-3, but to do the last step, we would need to update routes/index.js and views/index.ejs further to something like below
+</p>
+<h4>routes/index.js (updated) - server</h4>
+<pre data-language="javascript">
+module.exports = function Route(app){
+  app.get('/', function(req, res){
+    res.render('index', {title:'Welcome Page', session_data:req.session});
+  });
+  app.post('/process', function(req, res){
+    console.log('POST INFO', req.body); //notice that the post information is stored in req.body
+    req.session.name = req.body.my_name;
+    req.session.email = req.body.email;
+    req.session.sessionID = req.sessionID; //unique sessionID for the user
+    req.session.save(function() {
+       res.redirect('/');
+    });
+  })
+}
+</pre>
+<h4>views/index.ejs - client</h4>
+<pre data-language="html">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;&lt;%= title %&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;% if(session_data.sessionID)
+       { %&gt;
+         &lt;%= "Thanks for submitting your form. The information you submitted is Email: " + session_data.email + ", Name: " + session_data.name %&gt;
+    &lt;% } %&gt;       
+    &lt;form action="/process" method="post"&gt;
+      &lt;input type="text" name="email" placeholder="Email" /&gt;
+      &lt;input type="text" name="my_name" placeholder="Name" /&gt;
+      &lt;input type="submit" value="Submit" /&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+										</div>
+							
+										<div class="right buttons_block">
+											<input type="button" name="module_next" class="module_button button next_button orange_button" alt="8943" value="Next"/>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div id="tab_8943" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<iframe class="embed_video" width="718" height="404" src="http://player.vimeo.com/video/81734639?wmode=opaque" frameborder="0" allowfullscreen="true" wmode="transparent"></iframe>
+											<div class="video_rating_block">
+												<form action="/students/process_rate" class="rate_form">
+													<input type="hidden" name="module_id" value="8943" />
+													<input type="hidden" name="rate"  />
+												</form>
+												<span>Rate video:</span>
+												<span class="rating_area">
+													<span title="Click to rate" data-rate-value="5" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="4" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="3" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="2" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="1" >&#9734;</span>
+												</span>
+											</div>
+											<div class="clear"></div>
+											<div id="module_description_8943" class="module_description"><p>
+                         WARNING: this video was created quickly mainly to serve as a blueprint for other instructors to re-create.  While we're working on the improved version of this video, you can still watch it as it contains some good information.
+</p>
+<p>
+                             One of the main reasons developers use Node is to create lightweight web services where the NodeServer can have persistent connections to the client.  Traditional web applications with PHP, Ruby, Python, etc, are where with traditional http request/response model where 1) the client sends a request to the web server, 2) the web server takes the request, gets whatever file it requested and 3) the web server closes that connection.
+</p>
+<h4>Ice Cream Analogy</h4>
+<p>
+                           Let's say that you have an ice cream business and you get all of your ice creams from a factory called 'DOJO ICE FACTORY'.  You're not the only ice cream vendor that gets its ice cream from this factory as there are other thousands of vendors who get their ice cream from the same factory.
+</p>
+<p>
+                           Let's say that whenever you want something from the factory, you pick up your phone, call the factory, ask them for something, and the factory gives you what you want and then hangs up the phone.  For example, if you wanted to know how many chocolate ice cream the factory has, you do the following:
+</p>
+<ol>
+ <li>You pick up the phone and call the factory <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_2115_002.jpg" style="float: right; width: 330px; margin: 0px 0px 10px 10px;" alt=""></li>
+ <li>You tell the factory, "how many chocolate ice creams do you have?" </li>
+ <li>The factory says "35" and then hangs up the phone</li>
+</ol>
+<p>
+                           If you wanted more information then you pick up the phone again and call.  Since the factory hangs up the phone as soon as it answers your question, you have to call the factory quite often.
+</p>
+<p>
+                           With this system, the factory runs fine with just one person handling the phone calls for the factory while serving say 5,000 ice cream vendors.
+</p>
+<h4>New Twist to the Story</h4>
+<p>
+  <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Now, let's say that you hired a new manager who wants to know in real time how many ice creams the factory has.  To do this, you decide to do the following:</span>
+</p>
+<ol>
+ <li>Every 10 seconds, you have someone in your business call the factory</li>
+ <li>You ask the factory, "how many ice creams do you have?"</li>
+ <li>The factory gives you all the list of ice creams they have as well as how many of each ice cream the factory currently has and then hangs up the phone</li>
+</ol>
+<p>
+                           Your manager wanted this data in real time and insisted that you call the factory every 1 second instead, but you make compromise with the manager and you both decide that every 10 seconds is enough.
+</p>
+<p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_2118_004.jpg" style="float: left; width: 418px; margin: 0px 10px 10px 0px;" alt="">
+</p>
+<p>
+             Most of the time (say 99% of the time), you call the factory and the factory tells you information that hasn't changed.  The person in the factory is starting to get frustrated with your phone call but that's okay.  With this real(?) time tracking of factory's inventory, you scale your ice cream business faster than your competitors.
+</p>
+<p>
+             Now, other ice cream vendors find out and they want to do the same thing you're doing as they also want REAL TIME inventory list of the factory, so they decide that they too will call the factory every 10 seconds and ask for this information.  Soon the factory hires more people to answer phone calls but even then it can't answer all the phone calls immediately, often times having the customer wait 30+ minutes before it can give the customer the information he/she wants.   Some customers are put on hold for hours or even days...  This causes a lot of problems and angry customers.
+</p>
+<h4>Factory updates!</h4>
+<p>
+                           Now imagine that the factory changes how things are done.  Instead of the factory hanging up the phone when the client calls, the factory promises not to hang up the phone.  The phone conversation becomes like this
+</p>
+<ol>
+ <li>the ice cream vendor calls the factory</li>
+ <li>the ice cream vendor asks for the latest ice cream inventory list/quantity.</li>
+ <li>factory provides the info but does NOT hang up the phone</li>
+ <li>the ice cream vendor says whenever the inventory changes, please let him/her know.</li>
+ <li>the factory waits and only when the inventory changes, it gives you the information you need.</li>
+</ol>
+<p>
+                           Because now you don't have to pick up the phone and call every 10 seconds, you could instead put your phone on speaker and you know that when something changes, you'll be notified!  You're happy because you don't have to call every 10 seconds and have the factory hang up on you.  The factory can serve more customers asking for updates.
+</p>
+<p>
+                           This one on one connection between the factory and the vendor is like the one on one socket connection made between the server and the client.  Whereas the previous web apps/servers would discontinue the connection as soon as it provided the information the client seeks, now with socketIO, the NodeJS server can have the live one on one connection with each client at all times.  <strong><em>Now, the client can EMIT information to the server and the server can EMIT information to the client.</em></strong>
+</p>
+<h4>Factory implement a broadcasting system</h4>
+<p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_2119_006.jpg" style="float: right; width: 363px; margin: 0px 0px 10px 10px;" alt="">
+</p>
+<p>
+                           The factory implement a new system called 'broadcasting'.  Because now so many vendors are asking for live update on the factory's ice cream inventory, it decides that whoever is on the phone call with the factory (whoever has the live one on one connection with the factory/server) it can BROADCAST to everyone this new information.  Instead of individually telling say thousands of vendors who are on the phone, you can just have one person broadcast to EVERYONE (that's connected to the factory) this news.
+</p>
+<p>
+         With this broadcasting system and emitting system, the factory runs much more efficiently and whereas the previous factory's model could only support say 10 vendors calling the factory at the same time, now the factory can serve say 10,000 vendors who can all call the factory at the same time and get updates!
+</p>
+<p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_2121_007.jpeg" style="float: left; width: 389px; margin: 0px 10px 10px 0px;" alt="">
+</p>
+<p>
+     In real scenarios, for things that require this persistent connection (live chat, multiplayer game on the web, live dashboard that updates live whenever things change) using a socket with Node could improve speed and efficiency by many orders of magnitude.  It's not uncommon for a single NodeJS server to serve 100,000+ simultaneous connections whereas a traditional PHP/Ruby/Python server would be lucky if a single server could handle more than 500 simultaneous connections.   Of course the actual speed improvement depends on the app and how complex the app needs to be but for things that require a persistent connection, NodeJS server would beat other programming languages by orders of magnitude.
+</p>
+<p>
+  <strong>Try this <a href="http://node.codingdojo.com/" target="_blank">real-time ice cream inventory app</a> , <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;"> add inventories of different ice cream flavors</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;"> for the factory, </span>then invite others or yourself to go to the unique link provided. Observe how as you change the inventory, it updates everyone else's screen. </strong>
+</p>
+<p>
+                           NOTES:
+</p>
+<ol>
+ <li><span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">In Rails and other frameworks, they are introducing servers with these socket support.  It's however relatively new and we think NodeJS since it was built specifically for this purpose is still a better route to go.</span></li>
+ <li><font face="Arial, Helvetica, Verdana, Tahoma, sans-serif">In the analogy, the factory is the web server and the factory workers are like PHP, Ruby, Python, C#, or in other words the scripting languages.  You could gain some speed improvements by having factory workers that do things faster than others (e.g. for example using C++ instead of Php/Ruby/Python) but even then with the original factory model, it will still not improve things dramatically.  Because this new factory is what fixed the system and not faster workers, in web apps too, to handle socket connections you need the SERVER to do things differently.  NodeJS creates servers whereas other scripting languages are not creating servers but are to be used with whatever server the developer wants.  It's this unique aspect of NodeJS that makes it possible for us to introduce this new factory/server model and scale web apps. </font></li>
+</ol></div>
+										</div>
+							
+										<div class="right buttons_block">
+											<input type="button" name="module_next" class="module_button button next_button orange_button" alt="8945" value="Next"/>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div id="tab_8945" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div id="module_description_8945" class="module_description"><p>
+              When the client and the server makes the one on one connection, BOTH the server and the client can emit/send information to one another.  Remember that emitting an event occurs for a one on one connection between the server and the client.  If you want the server to send the same event information to more than one client, you would want to BROADCAST the event instead of emitting it.
+</p>
+<p>
+              Let's develop codes for the following scenario
+</p>
+<ol>
+ <li>Have the client EMIT an event called 'order_ice_cream' as soon as the document is ready.  Have it pass which ice cream it wants to order as well as the quantity.</li>
+ <li>Have the server listen for an event called 'order_ice_cream' and when it gets that event, EMIT an event called 'deliver_ice_cream'.  Have it pass a message 'thank you for your order'.</li>
+ <li>Have the client listen for an event called 'deliver_ice_cream' and when it gets that event, display the message from the factory somewhere in the client console.</li>
+</ol>
+<p>
+              For a simple process like this, we have the client EMIT 1 event (order_ice_cream) and listening for 1 event (deliver_ice_cream).  The server EMITs 1 event (deliver_ice_cream) and listens for 1 event (order_ice_cream).<span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;"></span>
+</p>
+<h4>client (client.html)</h4>
+<pre data-language="javascript">
+&lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+io = io.connect();
+io.emit('order_ice_cream', {type: 'chocolate', quantity: 5});
+// Listen for the deliver_ice_cream event
+io.on('deliver_ice_cream', function(stuff) {
+    console.log('Received ice creams! It came with the following stuff:', stuff);
+});
+&lt;/script&gt;
+</pre>
+<h4><span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif; font-weight: bold;">server (routes/index.js)</span></h4>
+<pre data-language="javascript">
+// Listens to the order_ice_cream event
+app.io.route('order_ice_cream', function(req) {
+    console.log('Client wants ', req.data.quantity + ' ' + req.data.type, 'ice cream');
+    req.io.emit('deliver_ice_cream', { message: 'Thank you!!!' });
+})
+</pre>
+<p>
+              Note that the data sent from the client's emit event was contained in req.data.
+</p></div>
+										</div>
+							
+										<div class="right buttons_block">
+											<input type="button" name="module_next" class="module_button button next_button orange_button" alt="8946" value="Next"/>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div id="tab_8946" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div id="module_description_8946" class="module_description"><p>
+  <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">You can easily broadcast messages to all your connected io clients. There are two primary ways to broadcast a message using </span><strong>express.io</strong><span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">:</span></p><ul>
+ <li><code>app.io.broadcast(event, data)</code> - Will send the <code>event</code> and <code>data</code> to all connected clients.</li> <li><code>req.io.broadcast(event, data)</code> - Will send the <code>event</code> and <code>data</code> to all connected clients except the client associated with the request.</li></ul><p>
+       For this example, pop open two browser windows to <code>localhost:7076</code>, then click refresh about five or six times on the second window, while watching what happens in the first window.</p><h4><a href="https://github.com/techpines/express.io/blob/master/examples/broadcasting/README.md#server-appjs"></a>Server (routes/index.js)</h4>
+<pre data-language="javascript">// Broadcast the new visitor event on ready route.
+app.io.route('ready', function(req) {
+    app.io.broadcast('new visitor');
+})
+// Send client html.
+app.get('/', function(req, res) {
+    res.render('client');
+})
+</pre><h4><a href="https://github.com/techpines/express.io/blob/master/examples/broadcasting/README.md#client-clienthtml"></a>Client (views/client.ejs)</h4>
+<pre data-language="javascript">  &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+  io = io.connect();
+  // Send the ready event.
+  io.emit('ready');
+  // Listen for the new visitor event.
+  io.on('new visitor', function() {
+    $('body').append('&lt;p&gt;New visitor, hooray! ' + new Date().toString() +'&lt;/p&gt;');
+  });
+  &lt;/script&gt;</pre><p>
+       It may be easier to understand how this works by breaking this down into steps</p><ol>
+ <li>The client visits "/"</li> <li>The server renders 'views/client.ejs'</li> <li>When the client loads 'client.ejs', it emits a ready event.</li> <li>The server listens to the 'ready' event and when it receives this, broadcasts to everyone (except the client associated with the request) a 'new visitor' event.</li> <li>The client listens for 'new visitor' event and when it receives this, it appends the new visitor information in the body.</li></ol></div>
+										</div>
+							
+										<div class="right buttons_block">
+											<input type="button" name="module_next" class="module_button button next_button orange_button" alt="8740" value="Next"/>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div id="tab_8740" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div id="module_description_8740" class="module_description"><h2>Rooms</h2><p>
+  <strong>This is a copy-paste example.</strong> <a href="https://github.com/techpines/express.io/tree/master/examples/rooms" target="_blank">(get the code)</a></p><p>
+             Sometimes you will want to group your io clients together into rooms. With <strong>express.io</strong> this is a breeze! Here are the commands for dealing with rooms:</p><ul>
+ <li><code>req.io.join(room)</code> - The client for the request joins <code>room</code>.</li> <li><code>req.io.leave(room)</code> - The client for the request leaves <code>room</code>.</li> <li><code>req.io.room(room).broadcast(event, data)</code> - Broadcast to all client in the room except for the current one.</li> <li><code>app.io.room(room).broadcast(event, data)</code> - Broadcast to all clients in the room.</li></ul><p>
+             For this example, open two browser windows on <code>localhost:7076</code>. You will be prompted to give a room name. Enter the same room name for each browser, then check back with the first window to see the result.</p><p>
+             Also, try a third window with a different room name, and see your other windows miss the broadcast.</p><h4><a href="https://github.com/techpines/express.io/tree/master/examples#server-appjs-6"></a>Server (routes/index.js)</h4>
+<pre data-language="javascript">// Setup the ready route, join room and broadcast to room.
+app.io.route('ready', function(req) {
+    req.io.join(req.data);
+    req.io.room(req.data).broadcast('announce', {
+        message: 'New client in the ' + req.data + ' room. '
+    });
+});
+// Send the client html.
+app.get('/', function(req, res) {
+    res.render('client');
+});
+</pre><h4><a href="https://github.com/techpines/express.io/tree/master/examples#client-clienthtml-3"></a>Client (views/client.html)</h4>
+<pre data-language="javascript">&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+io = io.connect();
+room = prompt('type a room name');
+// Emit ready event with room name.
+io.emit('ready', room);
+// Listen for the announce event.
+io.on('announce', function(data) {
+    $('body').append('&lt;p&gt;'+data.message+ new Date().toString()+'&lt;/p&gt;');
+})
+&lt;/script&gt;
+</pre></div>
+										</div>
+							
+										<div class="right buttons_block">
+											<input type="button" name="module_next" class="module_button button next_button orange_button" alt="8747" value="Next"/>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div id="tab_8747" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div id="module_description_8747" class="module_description"><h2>Detecting user connection and disconnection</h2>
+<p>
+             There is a way you can detect whether the socketIO connection has been made.  This can be done by putting the following code in your routes/index.js
+</p>
+<pre data-language="javascript">
+app.io.on('connection', function (req) {
+  console.log('connection made');
+  //console.log('\n\nLooking into req:', req);
+}
+</pre>
+<p>
+             A better approach is to have the client emit an event, say 'ready' to the server, so that all event listening by the server can be handled by app.io.route() instead of using any app.io.on().  In fact, for Express.io, it's recommended that you use app.io.route to handle all event listening than using app.io.on().
+</p>
+<p>
+        Now, to detect when a user disconnects from the socket connection, you can listen for a 'disconnect' event submitted by the client (this is done automatically by the client/browser).  For example
+</p>
+<pre data-language="javascript">
+app.io.route('disconnect', function(req){
+  console.log('Disconnected');
+  //console.log('\n\nLooking into req:', req);
+}
+</pre>
+<h2>Dynamic URL handling</h2>
+<p>
+        Let's say that you wanted to direct people to different urls (e.g. rooms/135, rooms/geeks, rooms/artists, etc) and you wanted to capture the name of the room from the url.  You could do this by setting up your routes/index.js to something like below:
+</p>
+<pre data-language="javascript">
+app.get('/room/:room', function(req, res){
+  console.log('came to the room ', req.route.params.room);
+  res.end('came to room ' + req.route.params.room);
+}
+</pre></div>
+										</div>
+							
+										<div class="right buttons_block">
+											<input type="button" name="module_next" class="module_button button next_button orange_button" alt="8971" value="Next"/>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div id="tab_8971" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div id="module_description_8971" class="module_description"><h2>Route Forwarding</h2>
+<p>
+            The "middleware" style of routing is not a very good fit for io requests. A typical io request does not need a response, so instead of "middleware", <strong>express.io</strong> offers a robust system based on <strong>route forwarding</strong>. Route forwarding can allow for a variety of rich, complex realtime interactions.
+</p>
+<p>
+            To forward a request, you use <code>req.io.route(route)</code>.
+</p>
+<p>
+            In this example, a route is a passed from an initial web request through two io routes, until finally back to the user. If you go to <code>localhost:6789</code> you should see a simple json request returned.
+</p>
+<h4>Server (/routes/index.js)</h4>
+<pre data-language="javascript">// Initial web request.
+app.get('/', function(req, res) {
+    // Forward to an io route.
+    req.io.route('hello');
+})
+// Forward io route to another io route.
+app.io.route('hello', function(req) {
+    req.io.route('hello-again');
+})
+// Sends response from io route.
+app.io.route('hello-again', function(req) {
+    req.io.respond({hello: 'from io route'});
+})
+</pre>
+<p>
+  <strong>Note</strong>: When you forward http requests to io routes, <code>req.io.respond(data)</code> will call <code>res.json(data)</code> on the actual http request. This makes sense because http routes require a response, and the <code>respond</code> method is supposed to be a response for the given request.
+</p>
+<p>
+            Also, depending on the sophistication needed between a socket request and a web request, you might consider writing your own custom middleware layer and overriding <code>req.io.route</code> for your web requests.
+</p>
+<h2>Acknowledgements</h2>
+<p>
+            Sometimes you need confirmation or acknowledgement from the server for an io request. To respond from the server you need to call <code>req.io.respond(data)</code>.
+</p>
+<p>
+            For this example, go to <code>localhost:6789</code> and you should get a pop-up from the acknowledgement.
+</p>
+<h4><a href="https://github.com/techpines/express.io/tree/master/examples#server-appjs-7"></a>Server (routes/index.js)</h4>
+<pre data-language="javascript">// Setup the ready route.
+app.io.route('ready', function(req) {
+    req.io.respond({
+        success: 'here is your acknowledegment for the ready event'
+    });
+})
+app.get('/', function(req, res) {
+    res.render('client');
+})
+</pre>
+<h4><a href="https://github.com/techpines/express.io/tree/master/examples#client-clienthtml-4"></a>Client (views/client.ejs)</h4>
+<pre data-language="javascript">&lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  io = io.connect();
+  // Emit ready event, and wait for acknowledgement.
+  io.emit('ready', {hey: 'server'}, function(data) {
+    alert&#40;data.success&#41;;
+  });
+&lt;/script&gt;
+</pre>
+<p>
+            This might lead some people to wonder, when is it best to send an acknowledgement vs just emitting an event to the client. It actually doesn't matter, it's more of a code clarity thing. Events are more flexible, because they can be triggered in a number of different ways, whereas the acknowledgement is a straight response.
+</p>
+<p>
+            In a way, the acknowledgements are a little more old-fashioned, pushing you towards the "every request has a response" mentality of traditional http. Sometimes this is good, other times it's not. Use common sense and just be consistent with whatever approach you take, and you should be fine.
+</p></div>
+										</div>
+							
+										<div class="right buttons_block">
+											<input type="button" name="module_next" class="module_button button next_button orange_button" alt="9113" value="Next"/>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div id="tab_9113" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div id="module_description_9113" class="module_description"><p>
+ So far you have learned how to exchange information from the server to the client or from the client to the server.  What if you wanted to have some codes in the server communicate with another codes in the server?   For example, say that you had two objects in your server app.js: friends, email.  Let's say whenever someone access friends.new method, you also wanted to notify email.invite method.  You don't want to mix these codes in one another but just want one method in one class/object to be notified when certain event occurs.  In these cases where you want one event in the server to trigger another event, you can use an Event Emitter.   For more information, you can read: <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;"><a href="http://nodejs.org/api/events.html" target="_blank">http://nodejs.org/api/events.html</a></span>
+</p>
+<p>
+ <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">You can build simple apps without using any event emitter but once your application gets quite complicated, you could use Event Emitter to better organize your NodeJS codes and for one method in the server to work together with another method in another object/class.</span>
+</p></div>
+										</div>
+									</div>
+
+					</div>
+	
+					<div class="module_tabs tabs module_item ui-tabs ui-widget ui-widget-content ui-corner-all" id="group_2">
+						<ul class="holder ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" alt="2">
+							<li class="quiz_tabs_block ui-state-default ui-corner-top tab_8958">
+								<a href="#tab_8958">Quiz (basic)</a>
+							</li>
+							<li class="quiz_tabs_block ui-state-default ui-corner-top tab_8965">
+								<a href="#tab_8965">Quiz (intermediate)</a>
+							</li>
+							<li class="quiz_tabs_block ui-state-default ui-corner-top tab_8966">
+								<a href="#tab_8966">Quiz (intermediate II)</a>
+							</li>
+							<li class="quiz_tabs_block ui-state-default ui-corner-top tab_8967">
+								<a href="#tab_8967">Quiz (advanced)</a>
+							</li>
+						</ul>									
+						<div class="clear"></div>
+									
+									<div id="tab_8958" class="quiz_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden first_tab_div">
+										<div class="module_content_block">
+											<div class="module_description"><p>
+ <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">It's IMPORTANT that you take the quizzes here BEFORE moving on to the assignments.  We want to make sure you understand some key concepts before moving on to the assignments so that you don't waste a lot of time looking for information elsewhere because you didn't understand some key concepts we wanted you to understand in the earlier tabs.  Please take the time to make sure you understand the answers to all the quiz questions before moving on.  Thank you!</span>
+</p></div>
+											<p class="quiz_instruction">Start the quiz by clicking the button below</p>
+										</div>
+										
+															
+										
+										<div class="quiz_results_block">										
+											<h3>Quiz Results</h3>
+											<table class="quiz_result_table tablesorter">
+												<thead>
+													<tr>
+														<th>#</th>
+														<th>Date Took</th>
+														<th>Minutes Spent</th>
+														<th>Score</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>March 4, 2014 (Tuesday)</td>
+														<td>2</td>
+														<td>
+															<a href="javascript:void(0);" class="display_quiz_result" data-quiz-title="Quiz (basic)" data-id="5597">50.00% (3/6)</a>
+														</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>March 4, 2014 (Tuesday)</td>
+														<td>2</td>
+														<td>
+															<a href="javascript:void(0);" class="display_quiz_result" data-quiz-title="Quiz (basic)" data-id="5598">83.33% (5/6)</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											
+											<div class="retake_quiz_button">
+												<form action="/students/get_quiz" method="post" class="form_get_quiz">
+													<input type="hidden" name="module_id" value="8958" />
+													<input type="submit" class="module_button button orange_button" value=" Retake the quiz " />
+												</form>
+												<p class="quiz_retake_note">You can the take quiz as many times as you need</p>
+											</div>		
+											<div class="clear"></div>
+	
+										</div>							
+										<div class="quiz_questions_block"></div>
+									</div>
+									
+									<div id="tab_8965" class="quiz_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div class="module_description"></div>
+											<p class="quiz_instruction">Start the quiz by clicking the button below</p>
+										</div>
+										
+															
+										
+										<div class="quiz_results_block">										
+											<h3>Quiz Results</h3>
+											<table class="quiz_result_table tablesorter">
+												<thead>
+													<tr>
+														<th>#</th>
+														<th>Date Took</th>
+														<th>Minutes Spent</th>
+														<th>Score</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>March 4, 2014 (Tuesday)</td>
+														<td>3</td>
+														<td>
+															<a href="javascript:void(0);" class="display_quiz_result" data-quiz-title="Quiz (intermediate)" data-id="5599">33.33% (2/6)</a>
+														</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>March 4, 2014 (Tuesday)</td>
+														<td>1</td>
+														<td>
+															<a href="javascript:void(0);" class="display_quiz_result" data-quiz-title="Quiz (intermediate)" data-id="5600">66.67% (4/6)</a>
+														</td>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>March 4, 2014 (Tuesday)</td>
+														<td>1</td>
+														<td>
+															<a href="javascript:void(0);" class="display_quiz_result" data-quiz-title="Quiz (intermediate)" data-id="5601">83.33% (5/6)</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											
+											<div class="retake_quiz_button">
+												<form action="/students/get_quiz" method="post" class="form_get_quiz">
+													<input type="hidden" name="module_id" value="8965" />
+													<input type="submit" class="module_button button orange_button" value=" Retake the quiz " />
+												</form>
+												<p class="quiz_retake_note">You can the take quiz as many times as you need</p>
+											</div>		
+											<div class="clear"></div>
+	
+										</div>							
+										<div class="quiz_questions_block"></div>
+									</div>
+									
+									<div id="tab_8966" class="quiz_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div class="module_description"></div>
+											<p class="quiz_instruction">Start the quiz by clicking the button below</p>
+										</div>
+										
+															
+										
+										<div class="quiz_results_block">										
+											<h3>Quiz Results</h3>
+											<table class="quiz_result_table tablesorter">
+												<thead>
+													<tr>
+														<th>#</th>
+														<th>Date Took</th>
+														<th>Minutes Spent</th>
+														<th>Score</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>March 4, 2014 (Tuesday)</td>
+														<td>2</td>
+														<td>
+															<a href="javascript:void(0);" class="display_quiz_result" data-quiz-title="Quiz (intermediate II)" data-id="5602">50.00% (5/10)</a>
+														</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>March 4, 2014 (Tuesday)</td>
+														<td>1</td>
+														<td>
+															<a href="javascript:void(0);" class="display_quiz_result" data-quiz-title="Quiz (intermediate II)" data-id="5603">100.00% (10/10)</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											
+											<div class="retake_quiz_button">
+												<form action="/students/get_quiz" method="post" class="form_get_quiz">
+													<input type="hidden" name="module_id" value="8966" />
+													<input type="submit" class="module_button button orange_button" value=" Retake the quiz " />
+												</form>
+												<p class="quiz_retake_note">You can the take quiz as many times as you need</p>
+											</div>		
+											<div class="clear"></div>
+	
+										</div>							
+										<div class="quiz_questions_block"></div>
+									</div>
+									
+									<div id="tab_8967" class="quiz_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div class="module_description"></div>
+											<p class="quiz_instruction">Start the quiz by clicking the button below</p>
+										</div>
+										
+															
+										
+										<div class="quiz_results_block">										
+											<h3>Quiz Results</h3>
+											<table class="quiz_result_table tablesorter">
+												<thead>
+													<tr>
+														<th>#</th>
+														<th>Date Took</th>
+														<th>Minutes Spent</th>
+														<th>Score</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>March 4, 2014 (Tuesday)</td>
+														<td>1</td>
+														<td>
+															<a href="javascript:void(0);" class="display_quiz_result" data-quiz-title="Quiz (advanced)" data-id="5604">44.44% (4/9)</a>
+														</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>March 4, 2014 (Tuesday)</td>
+														<td>1</td>
+														<td>
+															<a href="javascript:void(0);" class="display_quiz_result" data-quiz-title="Quiz (advanced)" data-id="5605">88.89% (8/9)</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											
+											<div class="retake_quiz_button">
+												<form action="/students/get_quiz" method="post" class="form_get_quiz">
+													<input type="hidden" name="module_id" value="8967" />
+													<input type="submit" class="module_button button orange_button" value=" Retake the quiz " />
+												</form>
+												<p class="quiz_retake_note">You can the take quiz as many times as you need</p>
+											</div>		
+											<div class="clear"></div>
+	
+										</div>							
+										<div class="quiz_questions_block"></div>
+									</div>
+
+					</div>
+	
+					<div class="module_tabs tabs module_item ui-tabs ui-widget ui-widget-content ui-corner-all" id="group_3">
+						<ul class="holder ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" alt="3">
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_8975">
+								<a href="#tab_8975">Demo - Chatoom</a>
+							</li>
+							<li class="text_tabs_block ui-state-default ui-corner-top tab_8976">
+								<a href="#tab_8976">Quote App</a>
+							</li>
+						</ul>									
+						<div class="clear"></div>
+									
+									<div id="tab_8975" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden first_tab_div">
+										<div class="module_content_block">
+											<iframe class="embed_video" width="718" height="404" src="http://player.vimeo.com/video/82110294?wmode=opaque" frameborder="0" allowfullscreen="true" wmode="transparent"></iframe>
+											<div class="video_rating_block">
+												<form action="/students/process_rate" class="rate_form">
+													<input type="hidden" name="module_id" value="8975" />
+													<input type="hidden" name="rate" value="4" />
+												</form>
+												<span>Rate video:</span>
+												<span class="rating_area">
+													<span title="Click to rate" data-rate-value="5" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="4" class="current_user_rate">&#9734;</span>
+													<span title="Click to rate" data-rate-value="3" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="2" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="1" >&#9734;</span>
+												</span>
+											</div>
+											<div class="clear"></div>
+											<div id="module_description_8975" class="module_description"><p>
+                 Say you wanted to build a simple web app like below where it shows all the users who are currently at your NodeJS app (visiting "/").  For new users, it should display the new user in REAL TIME and also remove any user who disconnects from the server.
+</p>
+<p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_1790_multiple-chat-simple.png">
+</p>
+<p>
+  <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">How would you build this app? Should you start building this right away? NO!!!!</span>
+</p>
+<p>
+  <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Whenever you have a cool idea, you should always always create a wireframe first.  You should then create the HTML, CSS, jQuery version of your wireframe next.  You shouldn't code UNTIL you have all the HTML, CSS, and jQuery all working!  So, let's say that you got all of these up and running, and now you want to make this work in NodeJS.  How would you do this?</span>
+</p>
+<p>
+                 You should first outline how this app is going to work, which event the server is going to EMIT or Broadcast to the client and which events the client is going to EMIT to the server.  You should outline these steps in numbered bullet points before you start any coding.  So, looking at the wireframe above, how would you build this app?  Maybe you could do something like this:
+</p>
+<ol>
+ <li>Have the NodeJS server render views/index.ejs that has the html content for the client whenever the client requests "/" </li>
+ <li>In the client codes, have a javascript code that asks the user for their name.  Store the user input in a variable called <strong><u>name</u></strong></li>
+ <li>Have the client EMIT to the server an event called "got_a_new_user" and pass '<strong><u>name</u></strong>' to the server. </li>
+ <li>Have the server LISTEN for an event called "got_a_new_user".  When this event gets triggered, have the server BROADCAST an event called 'new_user' to the client with the <u>name</u> of the new user attached to the event.</li>
+ <li>Have the client LISTEN for an event called 'new_user' and when this event gets triggered, have jQuery render a new box with the new user's name.</li>
+ <li>Wait...  But this does not detect when a user disconnects from the socketIO connection.  To do this, we need to have the server LISTEN for an event called 'disconnect' and when this event gets triggered, broadcast an event called 'disconnect_user' to all clients.</li>
+ <li>We need to have the client LISTEN for an event called 'disconnect_user' and remove any html box associated with this user.</li>
+</ol>
+<p>
+       (if you have watched the video, you would realize that we need to tweak the 7 steps above to actually make this app fully functional,  refer to the video or try to figure out on your own how to make this app complete by modifying the steps above).
+</p>
+<p>
+   For what seemed to be a really really simple app, when we wrote down the steps, it turns out that designing this app isn't straightforward as we may have thought?  Well,  That's why it's always nice to create these steps and determine in advance what events need to be emitted/broadcasted, what these event names will be called, and what data needs to be exchanged between the server and the client.  The above steps will be a good starting point and as you build things, you may find things you need to add to the steps, etc.
+</p>
+<p>
+                 Now, you may be wondering for step 7, how the client could possibly know which box to remove!  It doesn't so we need to be kind of tricky.  What we could do is
+</p>
+<ul>
+ <li>For step 4, when the server gets the event 'got_a_new_user', store a sessionID of the user and pass this sessionID with the event "new_user".  Then have the client render this html box with the id of the sessionID of this user.</li>
+ <li>For step 6, when the server emits an event called 'disconnect_user', pass the sessionID of the disconnected user as well.  In step 7, have the client remove the HTML box with the id of the sessionID of the disconnected user.</li>
+</ul></div>
+										</div>
+							
+										<div class="right buttons_block">
+											<input type="button" name="module_next" class="module_button button next_button orange_button" alt="8965" value="Next"/>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div id="tab_8976" class="ui-tabs-panel tab_form text_tab ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<iframe class="embed_video" width="718" height="404" src="http://player.vimeo.com/video/82110145?wmode=opaque" frameborder="0" allowfullscreen="true" wmode="transparent"></iframe>
+											<div class="video_rating_block">
+												<form action="/students/process_rate" class="rate_form">
+													<input type="hidden" name="module_id" value="8976" />
+													<input type="hidden" name="rate"  />
+												</form>
+												<span>Rate video:</span>
+												<span class="rating_area">
+													<span title="Click to rate" data-rate-value="5" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="4" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="3" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="2" >&#9734;</span>
+													<span title="Click to rate" data-rate-value="1" >&#9734;</span>
+												</span>
+											</div>
+											<div class="clear"></div>
+											<div id="module_description_8976" class="module_description"><p>
+       Say you wanted to build the app below.  You'll get to do this in one of your assignments.  What steps would you need to take?
+</p>
+<p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_1784_assignments2.png">
+</p></div>
+										</div>
+							
+										<div class="right buttons_block">
+											<input type="button" name="module_next" class="module_button button next_button orange_button" alt="8966" value="Next"/>
+										</div>
+										<div class="clear"></div>
+									</div>
+
+					</div>
+	
+					<div class="module_tabs tabs module_item ui-tabs ui-widget ui-widget-content ui-corner-all" id="group_4">
+						<ul class="holder ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" alt="4">
+							<li class="todo_tabs_block ui-state-default ui-corner-top tab_8752">
+								<a href="#tab_8752">Assignments Basic I</a>
+							</li>
+							<li class="todo_tabs_block ui-state-default ui-corner-top tab_8956">
+								<a href="#tab_8956">II</a>
+							</li>
+							<li class="todo_tabs_block ui-state-default ui-corner-top tab_8978">
+								<a href="#tab_8978">Intermediate I</a>
+							</li>
+							<li class="todo_tabs_block ui-state-default ui-corner-top tab_8949">
+								<a href="#tab_8949">II</a>
+							</li>
+							<li class="todo_tabs_block ui-state-default ui-corner-top tab_9626">
+								<a href="#tab_9626">III (optional)</a>
+							</li>
+							<li class="todo_tabs_block ui-state-default ui-corner-top tab_8957">
+								<a href="#tab_8957">Advanced (optional)</a>
+							</li>
+							<li class="todo_tabs_block ui-state-default ui-corner-top tab_8947">
+								<a href="#tab_8947">Advanced (for hackers!)</a>
+							</li>
+						</ul>									
+						<div class="clear"></div>
+									<div id="tab_8752" class="todo_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden first_tab_div">
+										<div class="module_content_block">
+											<div class="module_description"><h2>Survey Form Part 1</h2>
+<p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_1763_form-basic.png">
+</p>
+<p>
+        Before you start coding this, first outline or write down the steps of accomplishing this.
+</p>
+<p>
+        For example
+</p>
+<ol>
+ <li>Have the server render views/index.ejs that has the form for the user to fill out</li>
+ <li>The user fills out the form and submits</li>
+ <li>The submitted form gets sent to /result</li>
+ <li>The server recognizes when someone posts things to /result, grabs information from the POST, and sends the POST data back as its renders views/results.ejs</li>
+</ol></div>
+											<ul class="todo_item_parent">											
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2465"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">Create a simple nodejs app in Express.io that allows the user to post simple information to /result.</div>
+													</form>
+												</li>
+					
+											</ul>
+											<h4 class="upload_note">Note:</h4>
+											<h4 class="upload_note_details">Note: Max file size is 5MB.</h4>
+											<div class="clear"></div>
+											<fieldset>
+												<legend>Files</legend>
+												<div class="file_upload_block">
+													<form action="/students/upload_to_do_file" class="todo_file_upload_form" method="post" enctype="multipart/form-data">
+														<input type="file" name="file" id="todo_file_upload_8752" />
+														<input type="hidden" name="module_id" value="8752" />
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="submit" name="module_upload" class="button upload_button blue_button submit_form_button" value="Upload"/>
+														<div class="clear"></div>
+													</form>
+												</div>
+												<ul class="todo_upload_files">				
+	
+												</ul>
+											</fieldset>
+										<div class="clear"></div>
+										</div>										
+									</div>
+									<div id="tab_8956" class="todo_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div class="module_description"><p>
+  <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;"></span>
+</p>
+<h2>Survey Form Part 2</h2>
+<p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_1767_form-intermediate.png">
+</p>
+<p>
+   Before you start coding this, first outline or write down the steps of accomplishing this.  Do this for EVERY nodeJS exercise as doing these steps will help you build your app easily.
+</p>
+<p>
+   For example for this particular app,
+</p>
+<ol>
+ <li>Have the server render views/index.ejs that has the form for the user to fill out </li>
+ <li>The user fills out the form and submits</li>
+ <li>The form information is EMITTED to the server with the event name "posting_form"</li>
+ <li>The server listens for an event 'posting_form' and when this event gets triggered, organizes all the emitted information to form a single message and sends this single message with the event called 'updated_message'.  It also EMITs an event called '<span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">random_number' with random number between 1-1000.</span></li>
+ <li>The client listens for an event called 'random_number' and when this event gets triggered, shows the number in the HTML.</li>
+ <li>The client listens for an event called 'updated_message' and when this event gets triggered, displays the message somewhere in the HTML</li>
+</ol>
+<p>
+   Outlining these steps BEFORE YOU CODE, will make it so much easier to build your app.  Again, there's not just one right way to build your app as you could build the same app using different steps but outlining what you plan to do first will increase your efficiency.
+</p></div>
+											<ul class="todo_item_parent">											
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2466"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">Modify the previous assignment so that instead of doing a POST, it EMITs the form to the server under the the event name 'posting_form'.  Have the server EMIT information back to the client and also emit another event called 'random_number' where the server gives a random number between 1-1000 to the client.  Have the client display this lucky number.  This app should work without having to do any POST or Redirect.</div>
+													</form>
+												</li>
+					
+											</ul>
+											<h4 class="upload_note">Note:</h4>
+											<h4 class="upload_note_details">Note: Max file size is 5MB.</h4>
+											<div class="clear"></div>
+											<fieldset>
+												<legend>Files</legend>
+												<div class="file_upload_block">
+													<form action="/students/upload_to_do_file" class="todo_file_upload_form" method="post" enctype="multipart/form-data">
+														<input type="file" name="file" id="todo_file_upload_8956" />
+														<input type="hidden" name="module_id" value="8956" />
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="submit" name="module_upload" class="button upload_button blue_button submit_form_button" value="Upload"/>
+														<div class="clear"></div>
+													</form>
+												</div>
+												<ul class="todo_upload_files">				
+	
+												</ul>
+											</fieldset>
+										<div class="clear"></div>
+										</div>										
+									</div>
+									<div id="tab_8978" class="todo_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div class="module_description"><h2>Typing in Real Time</h2>
+<p>
+            You want to continue building the app in the previous demo but this time, you want people to type messages and for everyone else to see what everyone else is typing in REAL TIME!
+</p>
+<p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_1788_multiple-chat.png">
+</p>
+<p>
+        How would you modify your logics to support this new feature?  Maybe you do something like below (bold parts are the new instructions)
+</p>
+<ol>
+ <li>Have the NodeJS server render views/index.ejs that has the html content for the client whenever the client requests "/"</li>
+ <li>In the client codes, have a javascript code that asks the user for their name. Store the user input in a variable called <strong><u>name</u></strong></li>
+ <li>Have the client EMIT to the server an event called "got_a_new_user" and pass '<strong><u>name</u></strong>' to the server.</li>
+ <li>Have the server LISTEN for an event called "got_a_new_user". When this event gets triggered, have the server EMIT an event called 'new_user' to the client with the <u>name</u> of the new user attached to the event.</li>
+ <li>Have the client LISTEN for an event called 'new_user' and when this event gets triggered, have jQuery render a new box with the new user's name.</li>
+ <li><strong>When the client updates the text box in the html (say id of 'my_box'), have the client EMIT an event called 'updated_text' to the server, and attach the value of my_box with the event.</strong></li>
+ <li><strong>Have the server LISTEN for an event called 'updated_text' and when this event gets triggered, BROADCAST to everyone (except the person who triggered the request) an event called 'text_update" (and attach the value of new text)</strong></li>
+ <li><strong>Have the client LISTEN for an event called 'text_update" and when this event gets triggered, update the HTML text of the user that the text was updated for.</strong></li>
+ <li>Have the server LISTEN for an event called 'disconnect' and when this event gets triggered, emit an event called 'disconnect_user' to the client.</li>
+ <li>We need to have the client LISTEN for an event called 'disconnect_user' and remove any html box associated with this user.</li>
+</ol>
+<p>
+  <span style="font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;">Again, the key lesson is that before you start coding, you should outline these steps in WRITING and determine beforehand how these events will be passed back and forth between the server and the client.</span>
+</p></div>
+											<ul class="todo_item_parent">											
+					
+											</ul>
+											<h4 class="upload_note">Note:</h4>
+											<h4 class="upload_note_details">Note: Max file size is 5MB.</h4>
+											<div class="clear"></div>
+											<fieldset>
+												<legend>Files</legend>
+												<div class="file_upload_block">
+													<form action="/students/upload_to_do_file" class="todo_file_upload_form" method="post" enctype="multipart/form-data">
+														<input type="file" name="file" id="todo_file_upload_8978" />
+														<input type="hidden" name="module_id" value="8978" />
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="submit" name="module_upload" class="button upload_button blue_button submit_form_button" value="Upload"/>
+														<div class="clear"></div>
+													</form>
+												</div>
+												<ul class="todo_upload_files">				
+	
+												</ul>
+											</fieldset>
+										<div class="clear"></div>
+										</div>										
+									</div>
+									<div id="tab_8949" class="todo_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div class="module_description"><h2>Group Chat</h2>
+<p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_1765_form-broadcast.png">
+</p>
+<p>
+     Before you start coding this, first outline or write down the steps of accomplishing this, outlining the names of the event that will be submitted from the server -&gt; client, or from client -&gt; server.  Create these outline in ordered steps first and then start creating your codes.
+</p></div>
+											<ul class="todo_item_parent">											
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2467"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">Create a simple app where multiple people can go to your nodeJS app and start chatting with each other.  You could connect to your web app from multiple browsers (one from Safari, one from Firefox, one from Chrome for example) to mimic multiple people visiting your site.  Use javascript 'prompt' to get the user's name IF the user's name is not already stored in its session.  Your chat board should update in real time and even show all the chats that occurred before the user joined the room.</div>
+													</form>
+												</li>
+					
+											</ul>
+											<h4 class="upload_note">Note:</h4>
+											<h4 class="upload_note_details">Note: Max file size is 5MB.</h4>
+											<div class="clear"></div>
+											<fieldset>
+												<legend>Files</legend>
+												<div class="file_upload_block">
+													<form action="/students/upload_to_do_file" class="todo_file_upload_form" method="post" enctype="multipart/form-data">
+														<input type="file" name="file" id="todo_file_upload_8949" />
+														<input type="hidden" name="module_id" value="8949" />
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="submit" name="module_upload" class="button upload_button blue_button submit_form_button" value="Upload"/>
+														<div class="clear"></div>
+													</form>
+												</div>
+												<ul class="todo_upload_files">				
+	
+												</ul>
+											</fieldset>
+										<div class="clear"></div>
+										</div>										
+									</div>
+									<div id="tab_9626" class="todo_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div class="module_description"><h2>Multiplayer PacMan</h2><p>You are now ready to create any multiplayer game that you can imagine! &nbsp;This is an optional assignment (only work on this if you have an additional time and you want to get better with Node and Javascript). &nbsp;In this assignment, you'll create a place where people can play pac man and see other players who are also playing the game! &nbsp;You can be creative and add additional features like allowing everyone to start at the same time and see who earns the most points within a certain timeframe. &nbsp;You can make it also so that whatever the user types appears in the multi person chat room below the game, etc. &nbsp;</p><p>Take time to figure out what features will be built on the client side javascript and what features need to be built by Node. &nbsp;Also pre-determine the event names that will be emitted/broadcasted from the client or from the server and what data the client or the server need to transmit with each of these events before you start building the codes. &nbsp;As with anything, built one feature (maybe have just one person be able to play a pac man) then add one feature at a time as you test your app.</p><p>Wireframe below:</p><h2><img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_2186_multiplayer-pacman.png" style="font-size: 12px; font-weight: normal;"></h2></div>
+											<ul class="todo_item_parent">											
+					
+											</ul>
+											<h4 class="upload_note">Note:</h4>
+											<h4 class="upload_note_details">Note: Max file size is 5MB.</h4>
+											<div class="clear"></div>
+											<fieldset>
+												<legend>Files</legend>
+												<div class="file_upload_block">
+													<form action="/students/upload_to_do_file" class="todo_file_upload_form" method="post" enctype="multipart/form-data">
+														<input type="file" name="file" id="todo_file_upload_9626" />
+														<input type="hidden" name="module_id" value="9626" />
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="submit" name="module_upload" class="button upload_button blue_button submit_form_button" value="Upload"/>
+														<div class="clear"></div>
+													</form>
+												</div>
+												<ul class="todo_upload_files">				
+	
+												</ul>
+											</fieldset>
+										<div class="clear"></div>
+										</div>										
+									</div>
+									<div id="tab_8957" class="todo_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div class="module_description"><h2>Awesome Quote</h2>
+<p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2241/handouts/chapter2241_1784_assignments2.png">
+</p>
+<p>
+         Before you start coding this, first outline or write down the steps of accomplishing this, outlining the names of the event that will be submitted from the server -&gt; client, or from client -&gt; server.  Create these outline in ordered steps first and then start creating your codes.
+</p></div>
+											<ul class="todo_item_parent">											
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2474"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">Create phase 1 of this assignment after outlining your steps.</div>
+													</form>
+												</li>
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2475"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">Create phase 2 of this assignment.</div>
+													</form>
+												</li>
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2476"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">Create phase 3 of this assignment.</div>
+													</form>
+												</li>
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2477"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">Create phase 4 of this assignment.</div>
+													</form>
+												</li>
+					
+											</ul>
+											<h4 class="upload_note">Note:</h4>
+											<h4 class="upload_note_details">Note: Max file size is 5MB.</h4>
+											<div class="clear"></div>
+											<fieldset>
+												<legend>Files</legend>
+												<div class="file_upload_block">
+													<form action="/students/upload_to_do_file" class="todo_file_upload_form" method="post" enctype="multipart/form-data">
+														<input type="file" name="file" id="todo_file_upload_8957" />
+														<input type="hidden" name="module_id" value="8957" />
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="submit" name="module_upload" class="button upload_button blue_button submit_form_button" value="Upload"/>
+														<div class="clear"></div>
+													</form>
+												</div>
+												<ul class="todo_upload_files">				
+	
+												</ul>
+											</fieldset>
+										<div class="clear"></div>
+										</div>										
+									</div>
+									<div id="tab_8947" class="todo_tab tab_form ui-tabs-panel ui-widget-content ui-corner-bottom hidden ">
+										<div class="module_content_block">
+											<div class="module_description"><p>
+       The following canvas example (obtained from Express.IO's tutorial guide and modified slightly to work with our app.js and routes/index.js) is a neat program!  Make this work and add the features below.
+</p>
+<h2>Real Time Canvas</h2>
+<p>
+  <strong>This is a copy-paste example.</strong> <a href="https://github.com/techpines/express.io/tree/master/examples/realtime-canvas" target="_blank">(get the code)</a>
+</p>
+<p>
+       This is a realtime canvas example. It's really cool, and it works right of the box, so give it a try!
+</p>
+<p>
+       Open two browser windows on <code>localhost:7076</code>, then click and drag to draw in the first browser window, and you can see it draw in the second browser!
+</p>
+<h4><a href="https://github.com/techpines/express.io/tree/master/examples#server-appjs-8"></a>Server (routes/index.js)</h4>
+<pre data-language="javascript">
+// Broadcast all draw clicks.
+app.io.route('drawClick', function(req) {
+    req.io.broadcast('draw', req.data);
+})
+// Send client html.
+app.get('/', function(req, res) {
+    res.render('client');
+})
+</pre>
+<h4><a href="https://github.com/techpines/express.io/tree/master/examples#client-clienthtml-5"></a>Client (views/client.ejs)</h4>
+<pre data-language="javascript">
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="//cdn.techpines.io/jquery.event.drag-2.0.js"&gt;&lt;/script&gt;
+&lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    App = {}
+    io = io.connect()
+    // Draw Function
+    App.draw = function(data) {
+        if (data.type == "dragstart") {
+            App.ctx.beginPath()
+            App.ctx.moveTo(data.x,data.y)
+        } else if (data.type == "drag") {
+            App.ctx.lineTo(data.x,data.y)
+            App.ctx.stroke()
+        } else {
+            App.ctx.stroke()
+            App.ctx.closePath()
+        }
+    }
+    // Draw from other sockets
+    io.on('draw', App.draw) 
+    // Bind click and drag events to drawing and sockets.
+    $(function() {
+        App.ctx = $('canvas')[0].getContext("2d")
+        $('canvas').live('drag dragstart dragend', function(e) {
+            offset = $(this).offset()
+            data = {
+                x: (e.clientX - offset.left), 
+                y: (e.clientY - offset.top),
+                type: e.handleObj.type
+            }
+            App.draw(data) // Draw yourself.
+            io.emit('drawClick', data) // Broadcast draw.
+        })
+    })         
+&lt;/script&gt;
+&lt;canvas width="800px" height="400px" style="margin: 0 auto"&gt;&lt;/canvas&gt;
+</pre></div>
+											<ul class="todo_item_parent">											
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2458"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">When a new user joins the site, it only shows the things that were drawn after the user joined the site.  Change this so that they can see all the things that were drawn before they joined the room.</div>
+													</form>
+												</li>
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2459"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">Allow anyone to clear what's in the whiteboard.</div>
+													</form>
+												</li>
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2460"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">Allow anyone to undo the last clear.</div>
+													</form>
+												</li>
+												<li>
+													<form action="/students/update_chapter_to_do" method="post" class="form_to_do_items">															
+														<input type="hidden" name="chapter_id" value="2214" />
+														<input type="hidden" name="user_id" value="5478" />
+														<input type="hidden" name="module_to_do_item_id" value="2461"/>																			
+														<input type="hidden" name="id"  />
+														<input type="hidden" name="is_completed" value="1" />	
+														<input type="hidden" name="activity_log_id"  />
+														<div class="item_checkbox "></div>
+														<input type="checkbox"  />
+														<div class="todo_list_item ">Allow the user to create a new room and invite others to join that room.</div>
+													</form>
+												</li>
+					
+											</ul>
+										<div class="clear"></div>
+										</div>										
+									</div>
+
+					</div>
+
+					<!-- For Displaying Quiz Results -->
+					<div id="quiz_result_dialog"></div>				</div>				
+			</div>
+			
+			<div id="right_content" class="content right chapter_right_content">
+				<div id="chapter_navigation_block">
+					<form action="/students/user_complete_chapter" method="post" id="complete_chapter_form">
+						<div id="complete_form_block" class="completed">
+							<input type="checkbox" class="hidden" name="is_complete" checked="checked"/>
+							<input type="hidden" name="chapter_id" value="2214"/>
+							<div class="checkbox_completed left checked"></div>
+							<h3 class="left completed">Chapter completed!</h3>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</form>
+				
+					<div id="chapter_rating_block">
+						<form action="/students/process_rate" class="rate_form">
+							<input type="hidden" name="chapter_id" value="2214" />
+							<input type="hidden" name="rate"  />
+						</form>
+						<span class="rate_chapter">Rate chapter:</span>
+						<span class="rating_area">
+							<span title="Click to rate" data-rate-value="5" >&#9734;</span>
+							<span title="Click to rate" data-rate-value="4" >&#9734;</span>
+							<span title="Click to rate" data-rate-value="3" >&#9734;</span>
+							<span title="Click to rate" data-rate-value="2" >&#9734;</span>
+							<span title="Click to rate" data-rate-value="1" >&#9734;</span>
+						</span>
+					</div>
+				
+						<div class="clear"></div>
+					<a href="http://codingdojo.boomyeah.com/students/chapter/2196" title="Previous: Building apps with NodeJS" class="left">
+						<div class="prev_chapter_button left"></div>
+						<div class="prev_chapter left">Previous</div>
+						<div class="clear"></div>
+					</a>
+					<a href="http://codingdojo.boomyeah.com/students/chapter/2251" title="Next: Advanced NodeJS topics" class="right">
+						<div class="next_chapter_button right"></div>
+						<div class="next_chapter right">Next</div>
+						<div class="clear"></div>
+					</a>
+					
+					<div class="clear"></div>
+				</div>
+				
+				
+<div id="handout_block" class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<div id="handout_tabs_block">
+		<fieldset class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+			<legend>Handouts</legend>
+	<div class="handout_reminder">
+		No handout files available
+	</div>
+
+		</fieldset>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="footer">
+	<div class="footer_links">
+		<ul>
+			<li><a href="/terms">Terms</a></li>
+			<li><a href="/privacy">Privacy</a></li>
+		</ul>					
+		<div id="footer_homepage" class="right">
+			<a href="http://boomyeah.com">BoomYEAH Learning Management System</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>	</div>
+</body>
+</html>
