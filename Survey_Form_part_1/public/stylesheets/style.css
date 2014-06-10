@@ -1,0 +1,41 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper{
+	width: 450px;
+	padding: 20px 20px;
+	border: 1px solid #C8C8C8;
+	margin: 20px auto;
+}
+
+label{
+	margin-left: 15px;
+}
+
+.col-sm-5{
+	margin-left: 0px;
+}
+
+.form-control{
+	max-width: 240px;
+	max-height: 30px;
+}
+
+textarea.form-control{
+	margin-left: 15px;
+	max-width: 408px;
+	max-height: 100px;
+}
+
+ul li{
+	min-height: 30px;
+	max-height: 30px;
+	max-width: 408px;
+	padding-left: 20px;
+}
+
+ul li:last-of-type{
+	min-height: 100px;
+	max-height: 100%;
+}

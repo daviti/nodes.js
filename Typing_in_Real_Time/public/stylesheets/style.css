@@ -1,0 +1,31 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+#wrapper{
+	width: 950px;
+	margin: 20px auto;
+}
+
+.box{
+	display: inline-block;
+}
+
+.box_name{
+	background: gray;
+	color: white;
+	width: 140px;
+	padding: 5px 10px;
+	border: 1px solid black;
+	margin: 10px 10px 0px 10px;
+}
+
+.box_content{
+	width: 150px;
+	height: 100px;
+	padding: 5px;
+	border: 1px solid black;
+	margin: 0px 10px 10px 10px;
+}

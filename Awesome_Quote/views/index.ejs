@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel="stylesheet" href="./stylesheets/style.css">
+		<link rel="stylesheet" href="./stylesheets/bootstrap.css">
+		<script src="./javascripts/jquery.js"></script>
+		<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var correct_answer = 0;
+				var equation = "";
+				io = io.connect();
+
+				$("#main_contents").on("submit", "#get_quote", function(e){
+					e.preventDefault();
+					io.emit("getting_quote");
+				});
+
+				$("#main_contents").on("submit", "#get_another_quote", function(e){
+					e.preventDefault();
+					io.emit("getting_quote");
+				});
+
+				io.on("give_quote", function(data){
+					$("#main_contents").html("<form action='' id='get_quote'><input type='submit' value='Give me an awesome quote' class='btn btn-default' /></form><p id='quote'>"+data.quote+"</p><form id='get_another_quote' action=''><input type='submit' value='Give me a new one!' class='btn btn-default pull-right' /><div class='clearfix'></div></form>");
+
+
+					if(data.room_answers[0])
+					{
+						$("#latest_answers").html("<ul class='list-unstyled pull-right'></ul><div class='clearfix'></div>");
+						for(var index = (data.room_answers.length-1); index > (data.room_answers.length-6); index--)
+						{
+							if(data.room_answers[index] !== undefined)
+								$(".list-unstyled").append("<li>"+data.room_answers[index].equation+data.room_answers[index].answer+"</li>");
+						}
+					}
+				});
+
+				io.on("math_question", function(data){
+					$("#main_contents").html("<p>"+data.message+"</p><form id='math_equation'><h3>"+data.equation+"</h3><input type='text' /></form>");
+					correct_answer = data.answer;
+					equation = data.equation;
+
+					if(data.room_answers[0])
+					{
+						$("#latest_answers").html("<ul class='list-unstyled pull-right'></ul><div class='clearfix'></div>");
+
+						for(var index = (data.room_answers.length-1); index > (data.room_answers.length-6); index--)
+						{
+							if(data.room_answers[index] !== undefined)	
+								$(".list-unstyled").append("<li>"+data.room_answers[index].equation+data.room_answers[index].answer+"</li>");
+						}
+					}
+				});
+
+				$("#main_contents").on("submit", "#math_equation", function(e){
+					e.preventDefault();
+					var status = ($("input").val() == correct_answer) ? 1 : 0;
+					io.emit("answer", {status: status ,equation: equation, answer: $("input").val()});
+						
+				});
+
+				io.on("update_latest_answers", function(data){
+					if(data.room_answers[0])
+					{
+						$("#latest_answers").html("<ul class='list-unstyled pull-right'></ul><div class='clearfix'></div>");
+						
+						for(var index = (data.room_answers.length-1); index > (data.room_answers.length-6); index--)
+						{
+							if(data.room_answers[index] !== undefined)
+								$(".list-unstyled").append("<li>"+data.room_answers[index].equation+data.room_answers[index].answer+"</li>");
+						}
+					}
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="main_contents">
+				<form action="" id="get_quote">
+					<input type="submit" value="Give me an awesome quote" class="btn btn-default" />
+				</form>
+				<div></div>
+			</div>
+			<div id="latest_answers"></div>
+		</div>
+	</body>
+</html>

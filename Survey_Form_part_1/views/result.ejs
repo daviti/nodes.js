@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Survey Result</title>
+		<link rel="stylesheet" href="./stylesheets/style.css">
+		<link rel="stylesheet" href="./stylesheets/bootstrap.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<p><strong>Submitted Information:</strong></p>
+			<ul class="list-unstyled">
+				<li class="row"><p>
+					<span class="col-sm-5">Name:</span>
+					<strong><%= user_data.name %></strong>
+				</p></li>
+				<li class="row"><p>
+					<span class="col-sm-5">Dojo Location:</span>
+					<strong><%= user_data.dojo_location %></strong>
+				</p></li>
+				<li class="row"><p>
+					<span class="col-sm-5">Favorite Language:</span>
+					<strong><%= user_data.favorite_language %></strong>
+				</p></li>
+				<li class="row" id="comment"><p>
+					<span class="col-sm-5">Comment:</span>
+					<strong><%= user_data.comment %></strong>
+				</p></li>
+			</ul>
+			<a href="/" class="btn btn-primary pull-right">Go Back</a>
+			<div class="clearfix"></div>
+		</div>
+	</body>
+</html>

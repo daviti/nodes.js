@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Group Chat</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<script src="./javascripts/jquery.js"></script>
+	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+	<script>
+		$(document).ready(function(){
+			var name = prompt("Please enter your name:");
+			io = io.connect();
+			io.emit("got_a_new_user", {name: name});
+			
+			io.on("new_user", function(data){
+				$("#wrapper").append("<div class='box "+data.socket_id+"'><div class='box_name'>" + data.new_user_name + "</div><textarea class='box_content "+data.socket_id+"'></textarea></div>");
+			});
+
+			io.on("existing_users", function(data){
+				for(var index in data.users)
+				{
+					if(data.users[index])
+						$("#wrapper").append("<div class='box "+data.users[index].socket_id+"'><div class='box_name'>" + data.users[index].user_name + "</div><textarea class='box_content "+data.users[index].socket_id+"'></textarea></div>");
+				}
+			});
+
+			$("#wrapper").on("keyup keydown", ".box_content", function(e){
+				var classes = this.classList;
+				var socket_id = classes[1];
+				var key_pressed = String.fromCharCode(e.which);
+
+				io.emit("updated_message", {chat_for: socket_id, message: $(this).val() });
+			});
+
+			io.on("message_update", function(data){
+				$("textarea."+ data.chat_for ).val(data.message );
+			});
+
+			io.on("disconnected_user", function(data){
+				$("div."+data.socket_id).remove();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+	</div>
+</body>
+</html>

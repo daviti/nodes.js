@@ -1,0 +1,54 @@
+#wrapper{
+	width: 1000px;
+	height: 100%;
+	margin: 0px auto;
+}
+
+#main_contents{
+	width: 400px;
+	margin: 100px auto;
+	position: relative;
+}
+
+#get_quote .btn{
+	width: 400px;
+	margin: 0px auto;
+}
+
+#quote{
+	width: 400px;
+	height: 250px;
+	padding: 10px;
+	border: 1px solid black;
+	margin: 20px 0px;
+}
+
+#get_another_quote{
+	width: auto;
+}
+
+#math_equation{
+	width: 200px;
+	margin: 0px auto;
+}
+
+#math_equation input{
+	width: 50px;
+	height: 30px;
+}
+
+h3{
+	display: inline;
+}
+
+ul{
+	width: 150px;
+	height: 120px;
+	position: absolute;
+	bottom: 0;
+	border: 1px solid black;
+}
+
+ul li{
+	padding: 0px 10px;
+}
